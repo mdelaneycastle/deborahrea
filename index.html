@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deborah Rea Counselling FDSC</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f8f8f8;
+        }
+        header img {
+            height: 50px;
+        }
+        header h1 {
+            margin: 0 0 0 10px;
+            font-size: 24px;
+            color: #333;
+        }
+        nav {
+            margin-left: auto;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+        }
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px 20px;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            color: white;
+        }
+        .hero img {
+            height: 200px;
+            border-radius: 50%;
+        }
+        .hero-text {
+            max-width: 600px;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-form input, .contact-form textarea {
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .contact-form button {
+            padding: 10px;
+            background-color: #ff7e5f;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" alt="Logo">
+        <h1>Deborah Rea Counselling FDSC</h1>
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact Us</a>
+        </nav>
+    </header>
+    <div class="hero">
+        <div class="hero-text">
+            <h2>Welcome to Deborah Rea Counselling FDSC</h2>
+            <p>Your journey to better mental health starts here.</p>
+        </div>
+        <img src="deborah.jpg" alt="Deborah Rea">
+    </div>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Placeholder text for the About Me section.</p>
+    </section>
+    <section id="services">
+        <h2>Our Services</h2>
+        <p>Placeholder text for the Services section.</p>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form class="contact-form" action="mailto:marcosisgaming@gmail.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="tel" name="contact" placeholder="Contact Number" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 Deborah Rea Counselling FDSC. All rights reserved.</p>
+    </footer>
+</body>
+</html>
