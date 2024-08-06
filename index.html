@@ -13,19 +13,16 @@
         }
         header {
             display: flex;
+            flex-direction: column;
             align-items: center;
             padding: 10px 20px;
             background: linear-gradient(to right, #ff7e5f, #feb47b);
             color: white;
-            justify-content: space-between;
-            flex-wrap: wrap;
         }
         .header-content {
             display: flex;
             align-items: center;
-            flex: 1;
             justify-content: center;
-            position: relative;
         }
         .header-content img {
             height: 100px;
@@ -37,7 +34,6 @@
             color: white;
             text-align: center;
         }
-        
         .hero-text {
             max-width: 600px;
             margin: 0 auto;
@@ -62,10 +58,20 @@
             padding: 20px;
             max-width: 800px;
             margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+        section img {
+            height: 200px;
+            margin-right: 20px;
+            border-radius: 50%;
+            border: 3px solid white;
         }
         section p {
             line-height: 1.6;
             margin-bottom: 15px;
+            flex: 1;
         }
         footer {
             display: flex;
@@ -99,6 +105,13 @@
             header img {
                 margin: 10px 0;
             }
+            section {
+                flex-direction: column;
+                align-items: center;
+            }
+            section img {
+                margin: 10px 0;
+            }
         }
     </style>
 </head>
@@ -108,29 +121,28 @@
             <img src="logo22.png" alt="Logo">
             <h1>Deborah Rea Counselling FDSC</h1>
         </div>
-         <img src="deborah2.png" alt="Deborah Rea" style="height: 150px; border-radius: 50%; border: 3px solid white;">
+        <div class="embark-sentence">
+            <p>Embark on your path to improved mental well-being today.</p>
+        </div>
     </header>
-    <div class="hero-text">
-        <h2>Welcome to Deborah Rea Counselling FDSC</h2>
-    </div>
-    <nav>
+        <nav>
         <a href="#about">About Me</a>
         <a href="#services">Services</a>
         <a href="contact.html">Contact Us</a>
     </nav>
     <section id="about">
-        <p class="statement">Welcome to my practice.</p>
-        <p>I am Deborah, a dedicated person-centred therapist passionate about fostering growth, healing, and self-discovery. My approach is rooted in the belief that each individual possesses the innate capacity for personal growth and self-understanding. I provide a safe, non-judgmental, and empathetic space where you can explore your thoughts and feelings at your own pace.</p>
-        <p>Drawing on the principles established by Carl Rogers, I emphasise genuine empathy, unconditional positive regard, and authentic, open communication. I believe in your potential to navigate life's challenges and strive to support you in unlocking your inner resources and achieving your personal goals.</p>
-        <p>Whether you are dealing with anxiety, depression, relationship issues, or simply seeking a deeper understanding of yourself, I am here to accompany you on your journey. Together, we can work towards a greater sense of well-being and a more fulfilling life.</p>
+        <img src="deborah2.png" alt="Deborah Rea">
+        <div>
+            <p class="statement">Welcome to my practice.</p>
+            <p>I am Deborah, a dedicated person-centred therapist passionate about fostering growth, healing, and self-discovery. My approach is rooted in the belief that each individual possesses the innate capacity for personal growth and self-understanding. I provide a safe, non-judgmental, and empathetic space where you can explore your thoughts and feelings at your own pace.</p>
+            <p>Drawing on the principles established by Carl Rogers, I emphasise genuine empathy, unconditional positive regard, and authentic, open communication. I believe in your potential to navigate life's challenges and strive to support you in unlocking your inner resources and achieving your personal goals.</p>
+            <p>Whether you are dealing with anxiety, depression, relationship issues, or simply seeking a deeper understanding of yourself, I am here to accompany you on your journey. Together, we can work towards a greater sense of well-being and a more fulfilling life.</p>
+        </div>
     </section>
     <section id="services">
         <h2>Our Services</h2>
         <p>Placeholder text for the Services section.</p>
     </section>
-    <div class="embark-sentence">
-        <p>Embark on your path to improved mental well-being today.</p>
-    </div>
     <footer>
         <p>&copy; 2024 Deborah Rea Counselling FDSC. All rights reserved.</p>
         <a href="https://www.bacp.co.uk/therapists/407141/deborah-rea/forest-row-east-sussex-rh18" target="_blank">
