@@ -3,40 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Deborah Rea Counselling FDSC</title>
+    <title>Deborah Rea Counselling FDSC</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Open Sans', Arial, sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         header {
             display: flex;
+            flex-direction: column;
             align-items: center;
             padding: 10px 20px;
-            background-color: #fff;
-            justify-content: center;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            color: white;
         }
-        header a {
+        .header-content {
             display: flex;
             align-items: center;
-            text-decoration: none;
+            justify-content: center;
         }
-        header img {
+        .header-content img {
             height: 100px;
+            margin-right: 20px;
         }
-        header h1 {
-            margin: 0 0 0 10px;
+        .header-content h1 {
+            margin: 0;
             font-size: 24px;
-            color: #333;
+            color: white;
+            text-align: center;
         }
         nav {
             text-align: center;
             padding: 10px 0;
-            border-top: 1px solid #ccc;
             border-bottom: 1px solid #ccc;
-            margin-bottom: 20px;
         }
         nav a {
             margin: 0 15px;
@@ -51,13 +53,34 @@
             padding: 20px;
             max-width: 800px;
             margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+        .about-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .about-content img {
+            height: 400px; /* Twice the size */
+            margin-right: 20px;
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+        .about-content div {
+            flex: 1;
+        }
+        .about-content p {
+            line-height: 1.6;
+            margin-bottom: 15px;
         }
         footer {
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #333;
-            color: white;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
             text-align: center;
             padding: 10px 0;
         }
@@ -65,18 +88,50 @@
             height: 60px;
             margin-left: 10px;
         }
+        .statement {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .embark-sentence {
+            text-align: center;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            header img {
+                margin: 10px 0;
+            }
+            .about-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            .about-content img {
+                margin: 10px 0;
+                height: 200px; /* Resize for mobile */
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <a href="index.html">
-            <img src="logo.jpg" alt="Logo">
+        <div class="header-content">
+            <img src="logo22.png" alt="Logo">
             <h1>Deborah Rea Counselling FDSC</h1>
-        </a>
+        </div>
+        <div class="embark-sentence">
+            <p>Embark on your path to improved mental well-being today.</p>
+        </div>
     </header>
+
     <nav>
-        <a href="index.html#about">About Me</a>
-        <a href="index.html#services">Services</a>
+        <a href="index.html">Home</a>
+        <a href="index.html">Services</a>
         <a href="contact.html">Contact Us</a>
     </nav>
     <section id="contact">
