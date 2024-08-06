@@ -15,41 +15,28 @@
             display: flex;
             align-items: center;
             padding: 10px 20px;
-            background-color: #fff;
-            justify-content: center;
-        }
-        header a {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            justify-content: space-between;
+            color: white;
         }
         header img {
             height: 100px;
+            margin-right: 20px;
         }
         header h1 {
-            margin: 0 0 0 10px;
+            margin: 0;
             font-size: 24px;
-            color: #333;
+            color: white;
         }
-        .hero {
+        header .header-content {
             display: flex;
             align-items: center;
-            justify-content: center;
-            padding: 50px 20px;
-            background: linear-gradient(to right, #ff7e5f, #feb47b);
-            color: white;
-            flex-wrap: wrap;
-        }
-        .hero img {
-            height: 200px;
-            border-radius: 50%;
-            margin-top: 20px;
-            border: 3px solid white;
         }
         .hero-text {
             max-width: 600px;
-            margin: 0 20px;
+            margin: 0 auto;
             text-align: center;
+            padding: 50px 20px;
         }
         nav {
             text-align: center;
@@ -94,30 +81,27 @@
             text-align: center;
         }
         @media (max-width: 768px) {
-            .hero {
+            header {
                 flex-direction: column;
-                align-items: center;
                 text-align: center;
             }
-            .hero img {
-                margin-top: 10px;
+            header img {
+                margin: 10px 0;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <a href="index.html">
+        <div class="header-content">
             <img src="logo.jpg" alt="Logo">
             <h1>Deborah Rea Counselling FDSC</h1>
-        </a>
-    </header>
-    <div class="hero">
-        <div class="hero-text">
-            <h2>Welcome to Deborah Rea Counselling FDSC</h2>
-            <p>Embark on your path to improved mental well-being today.</p>
         </div>
-        <img src="deborah2.png" alt="Deborah Rea">
+        <img src="deborah2.png" alt="Deborah Rea" style="height: 100px; border-radius: 50%; border: 3px solid white;">
+    </header>
+    <div class="hero-text">
+        <h2>Welcome to Deborah Rea Counselling FDSC</h2>
+        <p>Embark on your path to improved mental well-being today.</p>
     </div>
     <nav>
         <a href="#about">About Me</a>
@@ -125,7 +109,6 @@
         <a href="contact.html">Contact Us</a>
     </nav>
     <section id="about">
-       
         <p class="statement">Welcome to my practice.</p>
         <p>I am Deborah, a dedicated person-centred therapist passionate about fostering growth, healing, and self-discovery. My approach is rooted in the belief that each individual possesses the innate capacity for personal growth and self-understanding. I provide a safe, non-judgmental, and empathetic space where you can explore your thoughts and feelings at your own pace.</p>
         <p>Drawing on the principles established by Carl Rogers, I emphasise genuine empathy, unconditional positive regard, and authentic, open communication. I believe in your potential to navigate life's challenges and strive to support you in unlocking your inner resources and achieving your personal goals.</p>
