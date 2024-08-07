@@ -100,9 +100,19 @@
         footer p {
             margin: 5px 0;
         }
-        footer img {
+        .footer-logos {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .footer-logos img {
+            margin: 5px;
+        }
+        .bacp-logo {
             height: 60px;
-            margin-top: 10px;
+        }
+        .directory-logo {
+            height: 30px;
         }
         @media (max-width: 768px) {
             .about-content {
@@ -123,7 +133,7 @@
 </head>
 <body>
     <header>
-       <a href="index.html"> <img src="logo22.png" alt="Logo"></a>
+        <a href="index.html"><img src="logo22.png" alt="Logo"></a>
         <h1>Deborah Rea Counselling FDSC</h1>
         <p>Embark on your path to improved mental well-being today.</p>
     </header>
@@ -146,16 +156,19 @@
             <a href="https://www.samaritans.org/how-we-can-help/contact-samaritan/" target="_blank">
                 <img src="samaritans.png" alt="Samaritans">
             </a>
-            <p>If you are in an immediate crisis, please contact the Samaritans.</p>
+            <p>"If you need someone to talk to, we listen. We won't judge or tell you what to do."</p>
         </div>
     </div>
     <footer>
         <p>&copy; 2024 Deborah Rea Counselling FDSC. All rights reserved.</p>
-        <a href="https://www.bacp.co.uk/therapists/407141/deborah-rea/forest-row-east-sussex-rh18" target="_blank">
-            <img src="BACP Logo2.png" alt="BACP Logo">
+        <div class="footer-logos">
+            <a href="https://www.bacp.co.uk/therapists/407141/deborah-rea/forest-row-east-sussex-rh18" target="_blank">
+                <img src="BACP Logo2.png" alt="BACP Logo" class="bacp-logo">
+            </a>
             <a href="https://www.counselling-directory.org.uk/counsellors/deborah-rea" target="_blank">
-            <img src="directory.png" alt="Directory Logo">
-        </a>
+                <img src="directory.png" alt="Directory Logo" class="directory-logo">
+            </a>
+        </div>
     </footer>
 </body>
 </html>
