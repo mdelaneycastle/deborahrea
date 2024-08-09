@@ -97,20 +97,32 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            background: linear-gradient(to right, #FFFFE0, white, #FFFFE0);
+            background: #FFFACD; /* Fallback color for older browsers */
+            background: -webkit-linear-gradient(left, #FFFACD, white, #FFFACD); /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(right, #FFFACD, white, #FFFACD); /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(right, #FFFACD, white, #FFFACD); /* For Firefox 3.6 to 15 */
+            background: linear-gradient(to right, #FFFACD, white, #FFFACD); /* Standard syntax */
             color: #333;
             padding: 20px 0;
         }
         footer p {
             margin: 5px 0;
         }
-        footer img {
-            height: 60px;
-            margin-top: 10px;
+        .footer-logos {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-         .directory-logo {
+        .footer-logos img {
+            margin: 5px;
+        }
+        .bacp-logo {
+            height: 60px;
+        }
+        .directory-logo {
             height: 30px;
         }
+        
         @media (max-width: 768px) {
             .about-content {
                 flex-direction: column;
