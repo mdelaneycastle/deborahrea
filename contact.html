@@ -93,6 +93,18 @@
             font-weight: 600;
             margin-top: 10px;
         }
+        footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #FFFACD; /* Fallback color for older browsers */
+            background: -webkit-linear-gradient(left, #FFFACD, white, #FFFACD); /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(right, #FFFACD, white, #FFFACD); /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(right, #FFFACD, white, #FFFACD); /* For Firefox 3.6 to 15 */
+            background: linear-gradient(to right, #FFFACD, white, #FFFACD); /* Standard syntax */
+            color: #333;
+            padding: 20px 0;
+        }
         footer p {
             margin: 5px 0;
         }
@@ -110,6 +122,7 @@
         .directory-logo {
             height: 30px;
         }
+
 
         @media (max-width: 768px) {
             .about-content {
