@@ -33,11 +33,20 @@
         header h1 {
             margin: 0;
             font-size: 28px;
+            font-weight: bold;
         }
-        header p {
+        header .subheader {
             margin: 0;
             font-size: 18px;
             margin-top: 10px;
+            font-weight: normal;
+        }
+        header .quote {
+            margin: 0;
+            font-size: 18px;
+            margin-top: 5px;
+            
+            font-style: italic; /* Italic text */
         }
         nav {
             text-align: center;
@@ -88,9 +97,7 @@
             max-height: 80px;
         }
         .samaritans-link p {
-            color: #004355;
             font-size: 18px;
-            font-weight: 600;
             margin-top: 10px;
         }
         footer {
@@ -122,8 +129,6 @@
         .directory-logo {
             height: 30px;
         }
-
-
         @media (max-width: 768px) {
             .about-content {
                 flex-direction: column;
@@ -133,49 +138,21 @@
                 margin: 10px 0;
             }
 
-             .samaritans-link img {
+            .samaritans-link img {
                 height: auto;
                 max-height: 60px;
-                 align-items: center;
-        }
-            footer {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background: #FFFACD; /* Fallback color for older browsers */
-            background: -webkit-linear-gradient(left, #FFFACD, white, #FFFACD); /* For Safari 5.1 to 6.0 */
-            background: -o-linear-gradient(right, #FFFACD, white, #FFFACD); /* For Opera 11.1 to 12.0 */
-            background: -moz-linear-gradient(right, #FFFACD, white, #FFFACD); /* For Firefox 3.6 to 15 */
-            background: linear-gradient(to right, #FFFACD, white, #FFFACD); /* Standard syntax */
-            color: #333;
-            padding: 20px 0;
-        }
-        footer p {
-            margin: 5px 0;
-        }
-        .footer-logos {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .footer-logos img {
-            margin: 5px;
-        }
-        .bacp-logo {
-            height: 60px;
-        }
-        .directory-logo {
-            height: 30px;
-        }
+                align-items: center;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <a href="index.html"><img src="logo22.png" alt="Logo"></a>
-        <h1>Deborah Rea Counselling</h1>
-        <p>Person-centred FdSc, Registered MBACP</p>
-        <p>Embark on your path to improved mental well-being today.</p>
+        <h1>Deborah Rea</h1>
+        <p class="subheader">Person-centred FdSc, Registered MBACP</p>
+        <p class="quote">Embark on your path to improved mental well-being today.</p>
+        
     </header>
     <nav>
         <a href="index.html">Home</a>
