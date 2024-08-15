@@ -16,6 +16,7 @@
             font-family: 'Arial', sans-serif;
             color: #333;
             background-color: #f8f8f8;
+            overflow-x: hidden;
         }
 
         /* Sticky header */
@@ -49,14 +50,18 @@
             color: #888;
         }
 
-        /* Hero section styling */
-        .hero {
-            height: 100vh;
-            background-color: #222;
-            color: #fff;
+        /* Section styling */
+        section {
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            transition: transform 0.8s ease-in-out;
+        }
+
+        .hero {
+            background-color: #222;
+            color: #fff;
             text-align: center;
         }
 
@@ -64,16 +69,14 @@
             font-size: 48px;
         }
 
-        /* Gallery section with dimmed images */
         .gallery-section {
-            padding: 60px 20px;
             background-color: #f0f0f0;
+            color: #333;
         }
 
         .gallery-section h2 {
             text-align: center;
             margin-bottom: 40px;
-            color: #333;
         }
 
         .gallery {
@@ -92,7 +95,6 @@
             width: 100%;
             height: auto;
             display: block;
-
             filter: brightness(50%) !important;
             transition: filter 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -103,10 +105,8 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
 
-        /* About and contact sections */
         .about-section,
         .contact-section {
-            padding: 60px 20px;
             background-color: #fff;
         }
 
@@ -171,41 +171,21 @@
             text-align: center;
         }
 
-        /* Slide out and slide in animations */
-        @keyframes slide-in-left {
-            from { transform: translateX(100%); }
-            to { transform: translateX(0); }
-        }
-
-        @keyframes slide-out-left {
-            from { transform: translateX(0); }
-            to { transform: translateX(-100%); }
-        }
-
-        @keyframes slide-in-right {
-            from { transform: translateX(-100%); }
-            to { transform: translateX(0); }
-        }
-
-        @keyframes slide-out-right {
-            from { transform: translateX(0); }
-            to { transform: translateX(100%); }
+        /* Slide transition classes */
+        .section-hidden {
+            display: none;
         }
 
         .slide-in-left {
-            animation: slide-in-left 1s forwards;
-        }
-
-        .slide-out-left {
-            animation: slide-out-left 1s forwards;
+            transform: translateX(-100%);
         }
 
         .slide-in-right {
-            animation: slide-in-right 1s forwards;
+            transform: translateX(100%);
         }
 
-        .slide-out-right {
-            animation: slide-out-right 1s forwards;
+        .current-section {
+            transform: translateX(0%);
         }
     </style>
 </head>
@@ -214,19 +194,19 @@
     <header class="sticky-header">
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" data-target="home">Home</a></li>
+                <li><a href="#gallery" data-target="gallery">Gallery</a></li>
+                <li><a href="#about" data-target="about">About</a></li>
+                <li><a href="#contact" data-target="contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="home" class="hero">
+    <section id="home" class="hero current-section">
         <h1>Welcome to My Art Portfolio</h1>
     </section>
 
-    <section id="gallery" class="gallery-section">
+    <section id="gallery" class="gallery-section section-hidden">
         <h2>My Artwork</h2>
         <div class="gallery">
             <div class="gallery-item">
@@ -242,12 +222,12 @@
         </div>
     </section>
 
-    <section id="about" class="about-section">
+    <section id="about" class="about-section section-hidden">
         <h2>About Me</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel sem ac sapien commodo fermentum.</p>
     </section>
 
-    <section id="contact" class="contact-section">
+    <section id="contact" class="contact-section section-hidden">
         <h2>Contact</h2>
         <form>
             <input type="text" placeholder="Your Name">
@@ -262,39 +242,37 @@
     </footer>
 
     <script>
-        // Array to maintain the order of sections
-        const sections = ['home', 'gallery', 'about', 'contact'];
-        let currentSectionIndex = 0;
+        // Handle navigation
+        const sections = {
+            home: document.getElementById('home'),
+            gallery: document.getElementById('gallery'),
+            about: document.getElementById('about'),
+            contact: document.getElementById('contact')
+        };
+        let currentSection = 'home';
 
-        // Function to handle the swipe direction
-        function handleNavigation(targetIndex) {
-            const targetSection = sections[targetIndex];
-            const currentSection = sections[currentSectionIndex];
-            
-            // Determine swipe direction
-            const direction = targetIndex > currentSectionIndex ? 'left' : 'right';
-
-            // Animate the current section out
-            document.getElementById(currentSection).classList.add(`slide-out-${direction}`);
-            
-            // Animate the target section in
-            document.getElementById(targetSection).classList.add(`slide-in-${direction}`);
-
-            // Remove animation classes after animation ends
-            setTimeout(() => {
-                document.getElementById(currentSection).classList.remove(`slide-out-${direction}`);
-                document.getElementById(targetSection).classList.remove(`slide-in-${direction}`);
-            }, 1000); // Adjust timing to match the animation duration
-
-            currentSectionIndex = targetIndex;
-        }
-
-        // Adding event listeners to nav buttons
-        document.querySelectorAll('nav a').forEach((anchor, index) => {
+        document.querySelectorAll('nav a').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                handleNavigation(index);
-                document.getElementById(sections[index]).scrollIntoView({ behavior: 'smooth' });
+                const targetSection = this.getAttribute('data-target');
+
+                if (targetSection === currentSection) return;
+
+                // Determine direction
+                const direction = sections[targetSection].offsetTop > sections[currentSection].offsetTop ? 'right' : 'left';
+
+                // Apply transition
+                sections[currentSection].classList.add(direction === 'right' ? 'slide-in-left' : 'slide-in-right');
+                sections[currentSection].classList.remove('current-section');
+                sections[targetSection].classList.remove('section-hidden');
+                sections[targetSection].classList.add('current-section');
+
+                // Reset classes after transition
+                setTimeout(() => {
+                    sections[currentSection].classList.add('section-hidden');
+                    sections[currentSection].classList.remove('slide-in-left', 'slide-in-right');
+                    currentSection = targetSection;
+                }, 800); // Match this with the CSS transition time
             });
         });
     </script>
