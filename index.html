@@ -3,180 +3,300 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deborah Rea Counselling FDSC</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
+    <title>My Art Portfolio</title>
     <style>
-        body {
-            font-family: 'Open Sans', Arial, sans-serif;
+        /* General reset and body styling */
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            color: #333;
         }
-        header {
+
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background-color: #f8f8f8;
+        }
+
+        /* Sticky header */
+        header.sticky-header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #000;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+
+        header nav ul {
+            list-style: none;
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-            background: #FFFACD; /* Fallback color for older browsers */
-            background: -webkit-linear-gradient(left, #FFFACD, white, #FFFACD); /* For Safari 5.1 to 6.0 */
-            background: -o-linear-gradient(right, #FFFACD, white, #FFFACD); /* For Opera 11.1 to 12.0 */
-            background: -moz-linear-gradient(right, #FFFACD, white, #FFFACD); /* For Firefox 3.6 to 15 */
-            background: linear-gradient(to right, #FFFACD, white, #FFFACD); /* Standard syntax */
-            color: #333;
-            text-align: center;
+            justify-content: center;
         }
-        header img {
-            height: 100px;
-            margin-bottom: 10px;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 28px;
-        }
-        header p {
-            margin: 0;
-            font-size: 18px;
-            margin-top: 10px;
-        }
-        nav {
-            text-align: center;
-            padding: 15px 0;
-            background-color: #f5f5f5;
-            border-bottom: 1px solid #ccc;
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #333;
-            font-size: 18px;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 0 20px;
-        }
-        .about-content {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            margin-bottom: 40px;
-        }
-        .about-content img {
-            flex: 1 1 200px;
-            max-width: 200px;
-            border-radius: 50%;
-            border: 3px solid white;
+
+        header nav ul li {
             margin: 0 20px;
         }
-        .about-content div {
-            flex: 2 1 400px;
-            margin-top: 20px;
-        }
-        .about-content p {
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-        .samaritans-link {
-            text-align: center;
-            margin-top: 40px;
-        }
-        .samaritans-link img {
-            max-height: 80px;
-        }
-        .samaritans-link p {
-            
-            font-size: 18px;
-            
-            margin-top: 10px;
-        }
-        footer {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background: #FFFACD; /* Fallback color for older browsers */
-            background: -webkit-linear-gradient(left, #FFFACD, white, #FFFACD); /* For Safari 5.1 to 6.0 */
-            background: -o-linear-gradient(right, #FFFACD, white, #FFFACD); /* For Opera 11.1 to 12.0 */
-            background: -moz-linear-gradient(right, #FFFACD, white, #FFFACD); /* For Firefox 3.6 to 15 */
-            background: linear-gradient(to right, #FFFACD, white, #FFFACD); /* Standard syntax */
-            color: #333;
-            padding: 20px 0;
-        }
-        footer p {
-            margin: 5px 0;
-        }
-        .footer-logos {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .footer-logos img {
-            margin: 5px;
-        }
-        .bacp-logo {
-            height: 60px;
-        }
-        .directory-logo {
-            height: 30px;
-        }
-        @media (max-width: 768px) {
-            .about-content {
-                flex-direction: column;
-                align-items: center;
-            }
-            .about-content img {
-                margin: 10px 0;
-            }
 
-            .samaritans-link img {
-                height: auto;
-                max-height: 60px;
-                align-items: center;
-            }
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #888;
+        }
+
+        /* Hero section styling */
+        .hero {
+            height: 100vh;
+            background-color: #222;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+        }
+
+        /* Gallery section with dimmed images */
+        .gallery-section {
+            padding: 60px 20px;
+            background-color: #f0f0f0;
+        }
+
+        .gallery-section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+
+            filter: brightness(50%) !important;
+            transition: filter 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            filter: brightness(100%);
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* About and contact sections */
+        .about-section,
+        .contact-section {
+            padding: 60px 20px;
+            background-color: #fff;
+        }
+
+        .about-section h2,
+        .contact-section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .about-section p {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            color: #555;
+        }
+
+        .contact-section form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-section form input,
+        .contact-section form textarea {
+            padding: 15px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-section form input:focus,
+        .contact-section form textarea:focus {
+            background-color: #e0e0e0;
+            outline: none;
+        }
+
+        .contact-section form button {
+            padding: 15px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-section form button:hover {
+            background-color: #555;
+        }
+
+        /* Footer styling */
+        footer {
+            padding: 20px 0;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+        }
+
+        /* Slide out and slide in animations */
+        @keyframes slide-in-left {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes slide-out-left {
+            from { transform: translateX(0); }
+            to { transform: translateX(-100%); }
+        }
+
+        @keyframes slide-in-right {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes slide-out-right {
+            from { transform: translateX(0); }
+            to { transform: translateX(100%); }
+        }
+
+        .slide-in-left {
+            animation: slide-in-left 1s forwards;
+        }
+
+        .slide-out-left {
+            animation: slide-out-left 1s forwards;
+        }
+
+        .slide-in-right {
+            animation: slide-in-right 1s forwards;
+        }
+
+        .slide-out-right {
+            animation: slide-out-right 1s forwards;
         }
     </style>
 </head>
 <body>
-    <header>
-        <a href="index.html"><img src="logo22.png" alt="Logo"></a>
-        <h1>Deborah Rea Counselling FDSC</h1>
-        <p>Embark on your path to improved mental well-being today.</p>
+
+    <header class="sticky-header">
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact Me</a>
-    </nav>
-    <div class="container">
-        <section class="about-content">
-            <img src="deborah2.png" alt="Deborah Rea">
-            <div>
-                <p class="statement"><strong>Welcome to my practice.</strong></p>
-                <p>I am Deborah, a dedicated integrative therapist focused on the person-centred approach, passionate about fostering growth, healing, and self-discovery. My approach is rooted in the belief that each individual possesses the innate capacity for personal growth and self-understanding. I provide a safe, non-judgmental, and empathetic space where you can explore your thoughts and feelings at your own pace.</p>
-                <p>Drawing on the principles established by Carl Rogers, I emphasise genuine empathy, unconditional positive regard, and authentic, open communication. I believe in your potential to navigate life's challenges and strive to support you in unlocking your inner resources and achieving your personal goals.</p>
-                <p>Whether you are dealing with anxiety, depression, relationship issues, or simply seeking a deeper understanding of yourself, I am here to assist you on your path of self-discovery, helping you to explore your life, gain deeper awareness and acceptance, and make meaningful new choices.</p>
+
+    <section id="home" class="hero">
+        <h1>Welcome to My Art Portfolio</h1>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+        <h2>My Artwork</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="example1.jpg" alt="Artwork 1">
             </div>
-        </section>
-        <div class="samaritans-link">
-            <p>If you are in immediate crisis, please contact the Samaritans.</p>
-            <a href="https://www.samaritans.org/how-we-can-help/contact-samaritan/" target="_blank">
-                <img src="samaritans.png" alt="Samaritans">
-            </a>
+            <div class="gallery-item">
+                <img src="example2.jpg" alt="Artwork 2">
+            </div>
+            <div class="gallery-item">
+                <img src="example3.jpg" alt="Artwork 3">
+            </div>
+            <!-- Add more items as needed -->
         </div>
-    </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <h2>About Me</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel sem ac sapien commodo fermentum.</p>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Contact</h2>
+        <form>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
     <footer>
-        <p>&copy; 2024 Deborah Rea Counselling FDSC. All rights reserved.</p>
-        <div class="footer-logos">
-            <a href="https://www.bacp.co.uk/therapists/407141/deborah-rea/forest-row-east-sussex-rh18" target="_blank">
-                <img src="BACP Logo2.png" alt="BACP Logo" class="bacp-logo">
-            </a>
-            <a href="https://www.counselling-directory.org.uk/counsellors/deborah-rea" target="_blank">
-                <img src="directory2.png" alt="Directory Logo" class="directory-logo">
-            </a>
-        </div>
+        <p>&copy; 2024 My Art Portfolio</p>
     </footer>
+
+    <script>
+        // Array to maintain the order of sections
+        const sections = ['home', 'gallery', 'about', 'contact'];
+        let currentSectionIndex = 0;
+
+        // Function to handle the swipe direction
+        function handleNavigation(targetIndex) {
+            const targetSection = sections[targetIndex];
+            const currentSection = sections[currentSectionIndex];
+            
+            // Determine swipe direction
+            const direction = targetIndex > currentSectionIndex ? 'left' : 'right';
+
+            // Animate the current section out
+            document.getElementById(currentSection).classList.add(`slide-out-${direction}`);
+            
+            // Animate the target section in
+            document.getElementById(targetSection).classList.add(`slide-in-${direction}`);
+
+            // Remove animation classes after animation ends
+            setTimeout(() => {
+                document.getElementById(currentSection).classList.remove(`slide-out-${direction}`);
+                document.getElementById(targetSection).classList.remove(`slide-in-${direction}`);
+            }, 1000); // Adjust timing to match the animation duration
+
+            currentSectionIndex = targetIndex;
+        }
+
+        // Adding event listeners to nav buttons
+        document.querySelectorAll('nav a').forEach((anchor, index) => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                handleNavigation(index);
+                document.getElementById(sections[index]).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
 </body>
 </html>
