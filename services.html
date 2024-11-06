@@ -132,19 +132,29 @@
             margin: 5px 0;
         }
         .footer-logos {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .footer-logos img {
-            margin: 5px;
-        }
-        .bacp-logo {
-            height: 60px;
-        }
-        .directory-logo {
-            height: 30px;
-        }
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+}
+
+.top-logos {
+    display: flex;
+    flex-direction: row; /* Aligns BACP and Registration Certificate icons in a row */
+    gap: 10px; /* Adds space between the icons */
+}
+
+.bacp-logo {
+    height: 60px;
+}
+
+.registration-icon {
+    height: 60px;
+}
+
+.directory-logo {
+    height: 30px;
+    margin-top: 10px; /* Adds some space above the Counselling Directory logo */
+}
         @media (max-width: 768px) {
             .about-content {
                 flex-direction: column;
