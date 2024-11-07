@@ -10,7 +10,6 @@
         font-family: 'Open Sans', Arial, sans-serif;
         margin: 0;
         padding: 0;
-        box-sizing: border-box;
         color: #333;
     }
 
@@ -27,12 +26,7 @@
         flex-direction: column;
         align-items: center;
         padding: 20px;
-        background: #FFFACD;
-        background: -webkit-linear-gradient(left, #FFFACD, white, #FFFACD);
-        background: -o-linear-gradient(right, #FFFACD, white, #FFFACD);
-        background: -moz-linear-gradient(right, #FFFACD, white, #FFFACD);
         background: linear-gradient(to right, #FFFACD, white, #FFFACD);
-        color: #333;
         text-align: center;
     }
 
@@ -91,7 +85,6 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        text-align: center;
         gap: 20px;
     }
 
@@ -103,6 +96,7 @@
 
     .about-content div {
         max-width: 600px;
+        text-align: center; /* Center text on both desktop and mobile */
     }
 
     .about-content p {
@@ -128,13 +122,9 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        background: #FFFACD;
-        background: -webkit-linear-gradient(left, #FFFACD, white, #FFFACD);
-        background: -o-linear-gradient(right, #FFFACD, white, #FFFACD);
-        background: -moz-linear-gradient(right, #FFFACD, white, #FFFACD);
         background: linear-gradient(to right, #FFFACD, white, #FFFACD);
-        color: #333;
         padding: 20px 0;
+        text-align: center;
     }
 
     footer p {
@@ -149,15 +139,10 @@
 
     .top-logos {
         display: flex;
-        flex-direction: row;
         gap: 10px;
     }
 
-    .bacp-logo {
-        height: 60px;
-    }
-
-    .registration-icon {
+    .bacp-logo, .registration-icon {
         height: 60px;
     }
 
@@ -169,22 +154,15 @@
     @media (max-width: 768px) {
         .about-content {
             flex-direction: column;
-            align-items: center;
-            text-align: center;
         }
 
         .about-content img {
             margin-bottom: 20px;
         }
 
-        .about-content div {
-            text-align: center; /* Center the text on mobile */
-        }
-
         .samaritans-link img {
             height: auto;
             max-height: 60px;
-            align-items: center;
         }
     }
 </style>
