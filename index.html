@@ -80,22 +80,24 @@
         padding: 0 20px;
     }
 
+    /* Three-column layout for about-content */
     .about-content {
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr; /* Image in left, text centered, right blank */
         align-items: center;
-        justify-content: center;
         gap: 20px;
+        text-align: center;
     }
 
     .about-content img {
-        max-width: 300px;
+        max-width: 100%; /* Keeps the image within the left column */
         border-radius: 50%;
         border: 3px solid white;
+        justify-self: end; /* Aligns the image to the right edge of the left column */
     }
 
     .about-content div {
         max-width: 600px;
-        text-align: center; /* Center text within the div */
     }
 
     .about-content p {
@@ -152,10 +154,12 @@
 
     @media (max-width: 768px) {
         .about-content {
-            flex-direction: column;
+            grid-template-columns: 1fr; /* Switch to a single column layout on mobile */
+            text-align: center;
         }
 
         .about-content img {
+            justify-self: center; /* Center image on mobile */
             margin-bottom: 20px;
         }
 
