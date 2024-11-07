@@ -6,162 +6,184 @@
     <title>Deborah Rea Counselling FDSC</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
     <style>
-        body {
-            font-family: 'Open Sans', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            color: #333;
-        }
+    body {
+        font-family: 'Open Sans', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: #333;
+    }
 
-        .statement-header {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 15px;
-    color: #333;
-    text-align: center;
-}
-        header {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-            background: #FFFACD; /* Fallback color for older browsers */
-            background: -webkit-linear-gradient(left, #FFFACD, white, #FFFACD); /* For Safari 5.1 to 6.0 */
-            background: -o-linear-gradient(right, #FFFACD, white, #FFFACD); /* For Opera 11.1 to 12.0 */
-            background: -moz-linear-gradient(right, #FFFACD, white, #FFFACD); /* For Firefox 3.6 to 15 */
-            background: linear-gradient(to right, #FFFACD, white, #FFFACD); /* Standard syntax */
-            color: #333;
-            text-align: center;
-        }
-        header img {
-            height: 100px;
-            margin-bottom: 10px;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 28px;
-            font-weight: bold;
-        }
-        header .subheader {
-            margin: 0;
-            font-size: 18px;
-            margin-top: 10px;
-            font-weight: normal;
-        }
-        header .quote {
-            margin: 0;
-            font-size: 18px;
-            margin-top: 5px;
-            font-weight: 600; /* Slightly bold */
-            font-style: italic; /* Italic text */
-        }
-        nav {
-            text-align: center;
-            padding: 15px 0;
-            background-color: #f5f5f5;
-            border-bottom: 1px solid #ccc;
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #333;
-            font-size: 18px;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 0 20px;
-        }
+    .statement-header {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        color: #333;
+        text-align: center;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background: #FFFACD; /* Fallback color for older browsers */
+        background: -webkit-linear-gradient(left, #FFFACD, white, #FFFACD); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(right, #FFFACD, white, #FFFACD); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(right, #FFFACD, white, #FFFACD); /* For Firefox 3.6 to 15 */
+        background: linear-gradient(to right, #FFFACD, white, #FFFACD); /* Standard syntax */
+        color: #333;
+        text-align: center;
+    }
+
+    header img {
+        height: 100px;
+        margin-bottom: 10px;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    header .subheader {
+        margin: 0;
+        font-size: 18px;
+        margin-top: 10px;
+        font-weight: normal;
+    }
+
+    header .quote {
+        margin: 0;
+        font-size: 18px;
+        margin-top: 5px;
+        font-weight: 600; /* Slightly bold */
+        font-style: italic; /* Italic text */
+    }
+
+    nav {
+        text-align: center;
+        padding: 15px 0;
+        background-color: #f5f5f5;
+        border-bottom: 1px solid #ccc;
+    }
+
+    nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #333;
+        font-size: 18px;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 0 20px;
+    }
+
+    .about-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+        gap: 20px;
+    }
+
+    .about-content img {
+        max-width: 300px;
+        border-radius: 50%;
+        border: 3px solid white;
+    }
+
+    .about-content div {
+        max-width: 600px;
+    }
+
+    .about-content p {
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+    .samaritans-link {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .samaritans-link img {
+        max-height: 80px;
+    }
+
+    .samaritans-link p {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #FFFACD; /* Fallback color for older browsers */
+        background: -webkit-linear-gradient(left, #FFFACD, white, #FFFACD); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(right, #FFFACD, white, #FFFACD); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(right, #FFFACD, white, #FFFACD); /* For Firefox 3.6 to 15 */
+        background: linear-gradient(to right, #FFFACD, white, #FFFACD); /* Standard syntax */
+        color: #333;
+        padding: 20px 0;
+    }
+
+    footer p {
+        margin: 5px 0;
+    }
+
+    .footer-logos {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+    }
+
+    .top-logos {
+        display: flex;
+        flex-direction: row; /* Aligns BACP and Registration Certificate icons in a row */
+        gap: 10px; /* Adds space between the icons */
+    }
+
+    .bacp-logo {
+        height: 60px;
+    }
+
+    .registration-icon {
+        height: 60px;
+    }
+
+    .directory-logo {
+        height: 30px;
+        margin-top: 10px; /* Adds some space above the Counselling Directory logo */
+    }
+
+    @media (max-width: 768px) {
         .about-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 40px;
-}
-.about-content img {
-    max-width: 300px;
-    border-radius: 50%;
-    border: 3px solid white;
-    margin-bottom: 20px;
-}
-.about-content div {
-    max-width: 600px;
-}
-        .about-content p {
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-        .samaritans-link {
-            text-align: center;
-            margin-top: 40px;
-        }
-        .samaritans-link img {
-            max-height: 80px;
-        }
-        .samaritans-link p {
-            font-size: 18px;
-            margin-top: 10px;
-        }
-        footer {
-            display: flex;
             flex-direction: column;
             align-items: center;
-            background: #FFFACD; /* Fallback color for older browsers */
-            background: -webkit-linear-gradient(left, #FFFACD, white, #FFFACD); /* For Safari 5.1 to 6.0 */
-            background: -o-linear-gradient(right, #FFFACD, white, #FFFACD); /* For Opera 11.1 to 12.0 */
-            background: -moz-linear-gradient(right, #FFFACD, white, #FFFACD); /* For Firefox 3.6 to 15 */
-            background: linear-gradient(to right, #FFFACD, white, #FFFACD); /* Standard syntax */
-            color: #333;
-            padding: 20px 0;
+            text-align: center;
         }
-        footer p {
-            margin: 5px 0;
+
+        .about-content img {
+            margin-bottom: 20px;
         }
-        .footer-logos {
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center;
-}
 
-.top-logos {
-    display: flex;
-    flex-direction: row; /* Aligns BACP and Registration Certificate icons in a row */
-    gap: 10px; /* Adds space between the icons */
-}
-
-.bacp-logo {
-    height: 60px;
-}
-
-.registration-icon {
-    height: 60px;
-}
-
-.directory-logo {
-    height: 30px;
-    margin-top: 10px; /* Adds some space above the Counselling Directory logo */
-}
-        @media (max-width: 768px) {
-            .about-content {
-                flex-direction: column;
-                align-items: center;
-            }
-            .about-content img {
-                margin: 10px 0;
-            }
-
-            .samaritans-link img {
-                height: auto;
-                max-height: 60px;
-                align-items: center;
-            }
+        .samaritans-link img {
+            height: auto;
+            max-height: 60px;
+            align-items: center;
         }
-    </style>
+    }
+</style>
 </head>
 <body>
     <header>
