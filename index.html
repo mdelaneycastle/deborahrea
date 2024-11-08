@@ -5,166 +5,146 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deborah Rea Counselling FDSC</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
- <style>
-    body {
-        font-family: 'Open Sans', Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        color: #333;
-    }
-
-    .statement-header {
-        font-size: 24px;
-        font-weight: bold;
-        margin-bottom: 15px;
-        color: #333;
-        text-align: center;
-    }
-
-    header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-        background: linear-gradient(to right, #FFFACD, white, #FFFACD);
-        text-align: center;
-    }
-
-    header img {
-        height: 100px;
-        margin-bottom: 10px;
-    }
-
-    header h1 {
-        margin: 0;
-        font-size: 28px;
-        font-weight: bold;
-    }
-
-    header .subheader {
-        margin: 0;
-        font-size: 18px;
-        margin-top: 10px;
-        font-weight: normal;
-    }
-
-    header .quote {
-        margin: 0;
-        font-size: 18px;
-        margin-top: 5px;
-        font-weight: 600;
-        font-style: italic;
-    }
-
-    nav {
-        text-align: center;
-        padding: 15px 0;
-        background-color: #f5f5f5;
-        border-bottom: 1px solid #ccc;
-    }
-
-    nav a {
-        margin: 0 15px;
-        text-decoration: none;
-        color: #333;
-        font-size: 18px;
-    }
-
-    nav a:hover {
-        text-decoration: underline;
-    }
-
-    .container {
-        max-width: 800px;
-        margin: 20px auto;
-        padding: 0 20px;
-    }
-
-    .about-content {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    .about-content img {
-        max-width: 300px;
-        border-radius: 50%;
-        border: 3px solid white;
-    }
-
-    .about-content div {
-        max-width: 600px;
-        text-align: center; /* Center text within the div */
-    }
-
-    .about-content p {
-        line-height: 1.6;
-        margin-bottom: 15px;
-    }
-
-    .samaritans-link {
-        text-align: center;
-        margin-top: 40px;
-    }
-
-    .samaritans-link img {
-        max-height: 80px;
-    }
-
-    .samaritans-link p {
-        font-size: 18px;
-        margin-top: 10px;
-    }
-
-    footer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background: linear-gradient(to right, #FFFACD, white, #FFFACD);
-        padding: 20px 0;
-        text-align: center;
-    }
-
-    footer p {
-        margin: 5px 0;
-    }
-
-    .footer-logos {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .top-logos {
-        display: flex;
-        gap: 10px;
-    }
-
-    .bacp-logo, .registration-icon {
-        height: 60px;
-    }
-
-    .directory-logo {
-        height: 30px;
-        margin-top: 10px;
-    }
-
-    @media (max-width: 768px) {
-        .about-content {
+    <style>
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333;
+        }
+        header {
+            display: flex;
             flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background: #FFFACD; /* Fallback color for older browsers */
+            background: -webkit-linear-gradient(left, #FFFACD, white, #FFFACD); /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(right, #FFFACD, white, #FFFACD); /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(right, #FFFACD, white, #FFFACD); /* For Firefox 3.6 to 15 */
+            background: linear-gradient(to right, #FFFACD, white, #FFFACD); /* Standard syntax */
+            color: #333;
+            text-align: center;
         }
-
+        header img {
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        header .subheader {
+            margin: 0;
+            font-size: 18px;
+            margin-top: 10px;
+            font-weight: normal;
+        }
+        header .quote {
+            margin: 0;
+            font-size: 18px;
+            margin-top: 5px;
+            font-weight: 600; /* Slightly bold */
+            font-style: italic; /* Italic text */
+        }
+        nav {
+            text-align: center;
+            padding: 15px 0;
+            background-color: #f5f5f5;
+            border-bottom: 1px solid #ccc;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 40px;
+        }
         .about-content img {
-            margin-bottom: 20px;
+            flex: 1 1 200px;
+            max-width: 300px;
+            border-radius: 50%;
+            border: 3px solid white;
+            margin: 0 20px;
         }
-
+        .about-content div {
+            flex: 2 1 400px;
+            margin-top: 20px;
+        }
+        .about-content p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .samaritans-link {
+            text-align: center;
+            margin-top: 40px;
+        }
         .samaritans-link img {
-            height: auto;
-            max-height: 60px;
+            max-height: 80px;
         }
-    }
-</style>
+        .samaritans-link p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #FFFACD; /* Fallback color for older browsers */
+            background: -webkit-linear-gradient(left, #FFFACD, white, #FFFACD); /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(right, #FFFACD, white, #FFFACD); /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(right, #FFFACD, white, #FFFACD); /* For Firefox 3.6 to 15 */
+            background: linear-gradient(to right, #FFFACD, white, #FFFACD); /* Standard syntax */
+            color: #333;
+            padding: 20px 0;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+        .footer-logos {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .footer-logos img {
+            margin: 5px;
+        }
+        .bacp-logo {
+            height: 60px;
+        }
+        .directory-logo {
+            height: 30px;
+        }
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            .about-content img {
+                margin: 10px 0;
+            }
+
+            .samaritans-link img {
+                height: auto;
+                max-height: 60px;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -181,16 +161,15 @@
     </nav>
     <div class="container">
         <section class="about-content">
-    <img src="deborah2.png" alt="Deborah Rea">
-    <div>
-        <h2 class="statement-header">Welcome to my practice.</h2>
-        <p>I am Deborah, a dedicated integrative therapist focused on the person-centered approach, passionate about fostering growth, healing, and self-discovery. My approach is rooted in the belief that each individual possesses the innate capacity for personal growth and self-understanding. I provide a safe, non-judgmental, and empathetic space where you can explore your thoughts and feelings at your own pace.</p>
-        <p>Drawing on the principles established by Carl Rogers, I emphasise genuine empathy, unconditional positive regard, and authentic, open communication. I believe in your potential to navigate life's challenges and strive to support you in unlocking your inner resources and achieving your personal goals.</p>
-        <p>Whether you are dealing with anxiety, depression, relationship issues, or simply seeking a deeper understanding of yourself, I am here to assist you on your path of self-discovery, helping you to explore your life, gain deeper awareness and acceptance, and make meaningful new choices.</p>
-        <p>My motivation to train as a counsellor grew from my own experience with therapy. During a time when I felt as though everything in my life was unravelling, I was fortunate to receive the support I needed just when I needed it most. Through counselling, I gained a clearer perspective and a deeper understanding of myself, which allowed me to turn my life around. This transformative experience inspired me to help others find their own path to living authentically and making meaningful changes in their lives.</p>
-        <p>I volunteer as a counsellor at St Peter & St James Hospice, where I support bereaved individuals, those with terminal illnesses, caregivers, and their families. Additionally, I worked as a Samaritan, providing crisis support to people in distress. In both roles, I've gained experience dealing with various challenging situations</p>
-    </div>
-</section>
+            <img src="deborah2.png" alt="Deborah Rea">
+            <div>
+                <p class="statement"><strong>Welcome to my practice.</strong></p>
+                <p>I am Deborah, a dedicated integrative therapist focused on the person-centered approach, passionate about fostering growth, healing, and self-discovery. My approach is rooted in the belief that each individual possesses the innate capacity for personal growth and self-understanding. I provide a safe, non-judgmental, and empathetic space where you can explore your thoughts and feelings at your own pace.</p>
+                <p>Drawing on the principles established by Carl Rogers, I emphasise genuine empathy, unconditional positive regard, and authentic, open communication. I believe in your potential to navigate life's challenges and strive to support you in unlocking your inner resources and achieving your personal goals.</p>
+                <p>Whether you are dealing with anxiety, depression, relationship issues, or simply seeking a deeper understanding of yourself, I am here to assist you on your path of self-discovery, helping you to explore your life, gain deeper awareness and acceptance, and make meaningful new choices.</p>
+                <p>I volunteer as a counsellor at St Peter & St James Hospice, where I support bereaved individuals, those with terminal illnesses, caregivers, and their families. Additionally, I worked as a Samaritan, providing crisis support to people in distress. In both roles, I've gained experience dealing with various challenging situations.</p>
+            </div>
+        </section>
         <div class="samaritans-link">
             <p>If you are in immediate crisis, please contact the Samaritans.</p>
             <a href="https://www.samaritans.org/how-we-can-help/contact-samaritan/" target="_blank">
@@ -199,21 +178,15 @@
         </div>
     </div>
     <footer>
-    <p>&copy; 2024 Deborah Rea Counselling FDSC. All rights reserved.</p>
-    <div class="footer-logos">
-        <div class="top-logos">
+        <p>&copy; 2024 Deborah Rea Counselling FDSC. All rights reserved.</p>
+        <div class="footer-logos">
             <a href="https://www.bacp.co.uk/therapists/407141/deborah-rea/forest-row-east-sussex-rh18" target="_blank">
                 <img src="BACP Logo2.png" alt="BACP Logo" class="bacp-logo">
             </a>
-            <a href="Registration Certificate - ZB781976.pdf" target="_blank">
-                <img src="ico.png" alt="Registration Certificate Icon" class="registration-icon">
+            <a href="https://www.counselling-directory.org.uk/counsellors/deborah-rea" target="_blank">
+                <img src="directory2.png" alt="Directory Logo" class="directory-logo">
             </a>
         </div>
-        <a href="https://www.counselling-directory.org.uk/counsellors/deborah-rea" target="_blank">
-            <img src="directory2.png" alt="Directory Logo" class="directory-logo">
-        </a>
-    </div>
-</footer>
-
+    </footer>
 </body>
 </html>
