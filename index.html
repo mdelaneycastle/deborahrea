@@ -13,13 +13,7 @@
         color: #333;
     }
 
-    .statement-header {
-        font-size: 24px;
-        font-weight: bold;
-        margin-bottom: 15px;
-        color: #333;
-        text-align: center;
-    }
+    
 
     header {
         display: flex;
@@ -82,10 +76,10 @@
 
  .about-content {
     display: flex;
-flex-direction:column;
-    align-items: center; /* Aligns image to the top of the text on larger screens */
+    align-items: flex-start;
     justify-content: center;
     gap: 20px;
+    margin-top: 20px;
 }
 
 .about-content img {
@@ -96,19 +90,24 @@ flex-direction:column;
 
 .about-content div {
     max-width: 600px;
-    text-align: center; /* Default to left-aligned text on larger screens */
+    text-align: center; /* Center-align text on laptop */
+}
+
+.statement-header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center; /* Center-align header on laptop */
 }
 
 @media (max-width: 768px) {
     .about-content {
-        flex-direction: column; /* Stack image and text vertically */
-        align-items: center; /* Center both image and text */
-        text-align: center; /* Center-align text */
+        flex-direction: column; /* Stack image and text vertically on mobile */
+        align-items: center;
+        text-align: center;
     }
 
-.statement-header {
-text-align: center;
-}
     .about-content img {
         margin-bottom: 20px;
         width: 60%; /* Adjusts image size on mobile */
@@ -116,6 +115,10 @@ text-align: center;
 
     .about-content div {
         text-align: center; /* Center-align text on mobile */
+    }
+
+    .statement-header {
+        text-align: center;
     }
 }
 
