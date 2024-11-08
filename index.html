@@ -81,11 +81,27 @@
     }
 
     .about-content {
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        gap: 20px;
+    display: flex;
+    align-items: flex-start; /* Aligns image to the top of the text on larger screens */
+    justify-content: center;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: center; /* Center both image and text */
+        text-align: center; /* Center-align text */
     }
+
+    .about-content img {
+        margin-bottom: 20px;
+    }
+
+    .about-content div {
+        text-align: center; /* Center-align text within div */
+    }
+}
 
     .about-content img {
         max-width: 300px;
