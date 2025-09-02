@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deborah Rea Counselling FDSC</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e8f4f8;
+            --text-primary: #2c3e50;
+            --text-secondary: #5d6d7e;
+            --border-color: #e0e6ed;
+            --background-light: #f8f9fa;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+            --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--accent-color) 0%, white 100%);
+            padding: 2rem 0;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .logo {
+            height: 80px;
+            margin-bottom: 1rem;
+            border-radius: 50%;
+            box-shadow: var(--shadow);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .subheader {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+            font-weight: 400;
+        }
+
+        .quote {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--secondary-color);
+            font-weight: 500;
+            margin-bottom: 2rem;
+        }
+
+        nav {
+            background: white;
+            padding: 1rem 0;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 99;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background: var(--accent-color);
+            color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        section {
+            padding: 4rem 0;
+            scroll-margin-top: 280px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+            margin: 1rem auto;
+            border-radius: 2px;
+        }
+
+        #about {
+            background: var(--background-light);
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .about-image {
+            flex: 0 0 250px;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 50%;
+            box-shadow: var(--shadow-hover);
+            border: 5px solid white;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        .crisis-section {
+            background: #fff3cd;
+            border: 2px solid #ffeaa7;
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .crisis-section p {
+            font-size: 1.2rem;
+            color: #856404;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .crisis-section img {
+            max-height: 70px;
+            transition: transform 0.3s ease;
+        }
+
+        .crisis-section img:hover {
+            transform: scale(1.05);
+        }
+
+        #services {
+            background: white;
+        }
+
+        .services-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+        }
+
+        .services-intro p {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-box {
+            background: linear-gradient(135deg, var(--accent-color) 0%, white 100%);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: var(--shadow);
+        }
+
+        .pricing-box h3 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .issues-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin: 3rem 0;
+        }
+
+        .issue-item {
+            background: white;
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            padding: 1rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .issue-item:hover {
+            border-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        #contact {
+            background: var(--background-light);
+        }
+
+        .contact-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-form {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+        }
+
+        .contact-phone {
+            background: var(--secondary-color);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-top: 2rem;
+        }
+
+        footer {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #34495e 100%);
+            color: white;
+            padding: 3rem 0 2rem;
+            text-align: center;
+        }
+
+        .footer-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .footer-logos img {
+            height: 50px;
+            transition: transform 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .footer-logos img:hover {
+            transform: scale(1.1);
+        }
+
+        .footer-text {
+            margin-top: 2rem;
+            color: #bdc3c7;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .section-title { font-size: 2rem; }
+            
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: center;
+            }
+            
+            nav a {
+                display: block;
+                text-align: center;
+                width: 200px;
+            }
+            
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .about-image {
+                flex: none;
+                max-width: 200px;
+                margin: 0 auto;
+            }
+            
+            .issues-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-logos {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 0 15px; }
+            section { padding: 2rem 0; }
+            .pricing-box { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <img src="logo22.png" alt="Deborah Rea Counselling" class="logo">
+                <h1>Deborah Rea Counselling</h1>
+                <p class="subheader">Person-centred FdSc, Registered MBACP</p>
+                <p class="quote">Embark on your path to improved mental well-being today.</p>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <div class="nav-container">
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">Welcome to my practice</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="deborah2.png" alt="Deborah Rea">
+                </div>
+                <div class="about-text">
+                    <p>I am Deborah, a dedicated integrative person-centred counsellor, passionate about fostering growth, healing, and self-discovery. My approach is rooted in the belief that each individual possesses the innate capacity for personal growth and self-understanding. I provide a safe, nonjudgmental, and empathetic space where you can explore your thoughts and feelings at your own pace, therapy that is tailored to you.</p>
+                    
+                    <p>Drawing on Carl Rogers's principles, I emphasise genuine empathy, unconditional positive regard, congruence, and authentic, open communication. I believe in your potential to navigate life's challenges and strive to support you in unlocking your inner resources and achieving your personal goals. There is no pressure to change who you are or to fit into a mould.</p>
+                    
+                    <p>Whether you are dealing with anxiety, depression, trauma, relationship issues, or simply seeking a deeper understanding of yourself, I am here to assist you on your path of self-discovery, helping you to explore your life, gain deeper awareness and acceptance, and make meaningful new choices.</p>
+                    
+                    <p>I often integrate somatic and creative approaches, thoughtfully tailored to each client's unique needs. Creative work can help surface emotions that are difficult to express verbally, offering a bridge to the unconscious, deepening self-understanding, and supporting emotional regulation. Somatic work helps reconnect with the body's wisdom, fostering awareness of physical sensations, releasing stored tension, and building a greater sense of safety and presence.</p>
+                    
+                    <p>When working with trauma, I use trauma-informed principles, gently creating a safe and supportive space where your pace and needs are honoured. This approach recognises how trauma can affect both the body and mind, nurturing healing that's empowering and whole, without needing to relive the experience.</p>
+                    
+                    <p>My motivation to train as a counsellor came from my own therapy experience. During a difficult time, when I felt as though everything in my life was unravelling, I received the support I needed, which helped me gain clarity and a deeper understanding of myself. This transformation inspired me to help others find their path to authenticity and meaningful change.</p>
+                    
+                    <p>I volunteer as a counsellor at St Peter & St James Hospice, where I support bereaved individuals, those with terminal illnesses, caregivers, and their families. Additionally, I worked as a Samaritan, providing crisis support to people in distress. In both roles, I have gained experience dealing with various challenging situations.</p>
+                </div>
+            </div>
+            
+            <div class="crisis-section">
+                <p>If you are in immediate crisis, please contact the Samaritans.</p>
+                <a href="https://www.samaritans.org/how-we-can-help/contact-samaritan/" target="_blank">
+                    <img src="samaritans.png" alt="Samaritans">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">Services & Approach</h2>
+            
+            <div class="services-intro">
+                <p>Embarking on the counselling journey can be significant, demonstrating your commitment to personal growth. Ensuring that you find the right therapist is important, so to help you take this step, I offer a free consultation, as I believe that trust and genuine connection are the cornerstones of a meaningful therapeutic relationship. This is an opportunity for you to express your counselling goals, ask any questions, and see if we would like to work together.</p>
+                
+                <p>I offer flexible therapy options designed to fit into your schedule. Alongside face-to-face sessions, I provide online and telephone counselling, allowing you to access professional support from the comfort of your own space, at a time that works for you. I also offer walk-and-talk therapy for those who find movement and nature helpful in the therapeutic process.</p>
+            </div>
+
+            <div class="pricing-box">
+                <h3>Session Information</h3>
+                <p><strong>Duration:</strong> 50 minutes per session</p>
+                <p><strong>Options:</strong> Long-term or short-term therapy</p>
+                <p><strong>Fee:</strong> £50 per session (after free consultation)</p>
+                <p><strong>Concessionary rates available</strong> - please enquire</p>
+                <p>I am a registered member of the British Association for Counselling and Psychotherapy (MBACP). I am fully insured, ICO registered, and DBS checked.</p>
+            </div>
+
+            <h3 style="text-align: center; color: var(--primary-color); margin: 3rem 0 2rem;">Issues I can help with</h3>
+            <div class="issues-grid">
+                <div class="issue-item">Abuse or neglect</div>
+                <div class="issue-item">Loneliness or lack of fulfilment</div>
+                <div class="issue-item">Addictions and addictive behaviours</div>
+                <div class="issue-item">Life-changing events</div>
+                <div class="issue-item">Anger management</div>
+                <div class="issue-item">Low mood</div>
+                <div class="issue-item">Anxiety and emotional regulation</div>
+                <div class="issue-item">Neurodigergence</div>
+                <div class="issue-item">Bereavement and loss</div>
+                <div class="issue-item">Personal development</div>
+                <div class="issue-item">Chronic Fatigue Syndrome</div>
+                <div class="issue-item">Redundancy and work-related issues</div>
+                <div class="issue-item">Depression</div>
+                <div class="issue-item">Relationships problems</div>
+                <div class="issue-item">Grief</div>
+                <div class="issue-item">Self-esteem and confidence</div>
+                <div class="issue-item">Health-related issues</div>
+                <div class="issue-item">Self-harm</div>
+                <div class="issue-item">Social anxiety</div>
+                <div class="issue-item">Support around sexuality, identity, and relationships</div>
+                <div class="issue-item">Stress</div>
+                <div class="issue-item">Suicidal thoughts</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <iframe src="https://docs.google.com/forms/d/1YQwtzKQlMA4xZI-qVrxujEizVkTSuuZXZhLOoCcnrLk/viewform?embedded=true" 
+                            width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">
+                        Loading…
+                    </iframe>
+                </div>
+                <div class="contact-phone">
+                    Alternatively, you can call me directly: 07816651172
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logos">
+                <a href="https://www.bacp.co.uk/therapists/407141/deborah-rea/forest-row-east-sussex-rh18" target="_blank">
+                    <img src="BACP Logo2.png" alt="BACP Logo">
+                </a>
+                <img src="dbs.png" alt="DBS">
+                <a href="https://www.counselling-directory.org.uk/counsellors/deborah-rea" target="_blank">
+                    <img src="directory2.png" alt="Counselling Directory">
+                </a>
+            </div>
+            <p class="footer-text">&copy; 2024 Deborah Rea Counselling FDSC. All rights reserved.</p>
+            <p class="footer-text">ICO registered: ZB781976</p>
+        </div>
+    </footer>
+</body>
+</html>
