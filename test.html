@@ -33,6 +33,7 @@
             line-height: 1.6;
             color: var(--text-primary);
             background: white;
+            overflow-x: hidden;
         }
 
         .container {
@@ -193,7 +194,17 @@
         .speech-bubble {
             font-size: 4rem;
             margin: 1rem 0;
-            
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+        
+        .crisis-section a {
+            text-decoration: none;
+        }
+        
+        .crisis-section a:hover .speech-bubble {
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
         }
         
         .crisis-contact-text {
