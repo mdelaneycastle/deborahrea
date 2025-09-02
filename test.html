@@ -190,13 +190,17 @@
             font-weight: 500;
         }
 
-        .crisis-section img {
-            max-height: 70px;
-            transition: transform 0.3s ease;
+        .speech-bubble {
+            font-size: 4rem;
+            margin: 1rem 0;
+            color: var(--secondary-color);
         }
-
-        .crisis-section img:hover {
-            transform: scale(1.05);
+        
+        .crisis-contact-text {
+            font-size: 1.1rem;
+            color: #856404;
+            font-weight: 500;
+            margin: 0;
         }
 
         #services {
@@ -383,6 +387,14 @@
                 font-size: 1rem;
                 padding: 0 0.5rem;
             }
+            
+            .speech-bubble {
+                font-size: 3rem;
+            }
+            
+            .crisis-contact-text {
+                font-size: 1rem;
+            }
         }
 
         @media (max-width: 480px) {
@@ -439,10 +451,11 @@
             </div>
             
             <div class="crisis-section">
-                <a href="https://www.samaritans.org/how-we-can-help/contact-samaritan/" target="_blank">
-                    <img src="samaritans.png" alt="Samaritans">
-                </a>
                 <p>If you are in immediate crisis, please contact the Samaritans.</p>
+                <a href="https://www.samaritans.org/how-we-can-help/contact-samaritan/" target="_blank">
+                    <div class="speech-bubble">💬</div>
+                </a>
+                <p class="crisis-contact-text">Contact a Samaritan</p>
             </div>
         </div>
     </section>
