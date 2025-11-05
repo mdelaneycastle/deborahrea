@@ -13,157 +13,136 @@
             box-sizing: border-box;
             color: #333;
         }
+
         header {
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 20px;
-            background: #FFFACD; /* Fallback color for older browsers */
-            background: -webkit-linear-gradient(left, #FFFACD, white, #FFFACD); /* For Safari 5.1 to 6.0 */
-            background: -o-linear-gradient(right, #FFFACD, white, #FFFACD); /* For Opera 11.1 to 12.0 */
-            background: -moz-linear-gradient(right, #FFFACD, white, #FFFACD); /* For Firefox 3.6 to 15 */
-            background: linear-gradient(to right, #FFFACD, white, #FFFACD); /* Standard syntax */
-            color: #333;
+            background: linear-gradient(to right, #FFFACD, white, #FFFACD);
             text-align: center;
         }
+
         header img {
             height: 100px;
             margin-bottom: 10px;
         }
+
         header h1 {
             margin: 0;
             font-size: 28px;
             font-weight: bold;
         }
+
         header .subheader {
             margin: 0;
             font-size: 18px;
             margin-top: 10px;
             font-weight: normal;
         }
+
         header .quote {
             margin: 0;
             font-size: 18px;
             margin-top: 5px;
-            font-weight: 600; /* Slightly bold */
-            font-style: italic; /* Italic text */
+            font-weight: 600;
+            font-style: italic;
         }
+
         nav {
             text-align: center;
             padding: 15px 0;
             background-color: #f5f5f5;
             border-bottom: 1px solid #ccc;
         }
+
         nav a {
             margin: 0 15px;
             text-decoration: none;
             color: #333;
             font-size: 18px;
         }
+
         nav a:hover {
             text-decoration: underline;
         }
+
         .container {
             max-width: 800px;
             margin: 20px auto;
             padding: 0 20px;
         }
-        .about-content {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            margin-bottom: 40px;
+
+        iframe {
+            width: 100%;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        .about-content img {
-            flex: 1 1 200px;
-            max-width: 200px;
-            border-radius: 50%;
-            border: 3px solid white;
-            margin: 0 20px;
-        }
-        .about-content div {
-            flex: 2 1 400px;
+
+        .contact-number {
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
             margin-top: 20px;
         }
-        .about-content p {
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-        .samaritans-link {
-            text-align: center;
-            margin-top: 40px;
-        }
-        .samaritans-link img {
-            max-height: 80px;
-        }
-        .samaritans-link p {
-            font-size: 18px;
-            margin-top: 10px;
-        }
+
         footer {
             display: flex;
             flex-direction: column;
             align-items: center;
-            background: #FFFACD; /* Fallback color for older browsers */
-            background: -webkit-linear-gradient(left, #FFFACD, white, #FFFACD); /* For Safari 5.1 to 6.0 */
-            background: -o-linear-gradient(right, #FFFACD, white, #FFFACD); /* For Opera 11.1 to 12.0 */
-            background: -moz-linear-gradient(right, #FFFACD, white, #FFFACD); /* For Firefox 3.6 to 15 */
-            background: linear-gradient(to right, #FFFACD, white, #FFFACD); /* Standard syntax */
+            background: linear-gradient(to right, #FFFACD, white, #FFFACD);
             color: #333;
             padding: 20px 0;
+            text-align: center;
         }
+
         footer p {
             margin: 5px 0;
         }
+
         .footer-logos {
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center;
-}
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-.top-logos {
-    display: flex;
-    flex-direction: row; /* Aligns BACP and Registration Certificate icons in a row */
-    gap: 10px; /* Adds space between the icons */
-}
+        .top-logos {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
 
-.bacp-logo, .registration-icon, .dbs {
-        height: 60px;
-    }
-        
-.directory-logo {
-    height: 30px;
-    margin-top: 10px; /* Adds some space above the Counselling Directory logo */
-}
+        .bacp-logo, .registration-icon, .dbs {
+            height: 60px;
+        }
 
-         .contact-number {
-    text-align: center; /* Centers the text */
-    font-weight: bold;  /* Makes the text bold */
-    font-size: 18px;    /* Optional: Adjust the font size if needed */
-    margin-top: 20px;   /* Optional: Add some space above the text */
-}
-        
+        .directory-logo {
+            height: 30px;
+            margin-top: 10px;
+        }
+
+        .extra-logos {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .extra-logos img {
+            height: 40px;
+        }
+
         @media (max-width: 768px) {
-            .about-content {
-                flex-direction: column;
-                align-items: center;
-            }
-            .about-content img {
-                margin: 10px 0;
+            iframe {
+                height: 700px;
             }
 
-            .samaritans-link img {
-                height: auto;
-                max-height: 60px;
-                align-items: center;
+            .extra-logos img {
+                height: 35px;
             }
-            
-            .contact-number {
-    text-align: center; /* Centers the text */
-    font-weight: bold;  /* Makes the text bold */
-    font-size: 18px;    /* Optional: Adjust the font size if needed */
-    margin-top: 20px;   /* Optional: Add some space above the text */
-}
         }
     </style>
 </head>
@@ -173,36 +152,41 @@
         <h1>Deborah Rea Counselling</h1>
         <p class="subheader">Person-centred FdSc, Registered MBACP</p>
         <p class="quote">Embark on your path to improved mental well-being today.</p>
-        
     </header>
+
     <nav>
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
         <a href="contact.html">Contact Me</a>
     </nav>
+
     <div class="container">
         <section id="contact">
-            
-            <iframe src="https://docs.google.com/forms/d/1YQwtzKQlMA4xZI-qVrxujEizVkTSuuZXZhLOoCcnrLk/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            <iframe src="https://docs.google.com/forms/d/1YQwtzKQlMA4xZI-qVrxujEizVkTSuuZXZhLOoCcnrLk/viewform?embedded=true" height="800">Loading…</iframe>
             <p class="contact-number">Alternatively, you can call me on 07816651172</p>
         </section>
     </div>
+
     <footer>
-    <p>&copy; 2024 Deborah Rea Counselling FDSC. All rights reserved.</p>
-    <div class="footer-logos">
-        <div class="top-logos">
-            <a href="https://www.bacp.co.uk/therapists/407141/deborah-rea/forest-row-east-sussex-rh18" target="_blank">
-                <img src="BACP Logo2.png" alt="BACP Logo" class="bacp-logo">
+        <p>&copy; 2024 Deborah Rea Counselling FDSC. All rights reserved.</p>
+        <div class="footer-logos">
+            <div class="top-logos">
+                <a href="https://www.bacp.co.uk/therapists/407141/deborah-rea/forest-row-east-sussex-rh18" target="_blank">
+                    <img src="BACP Logo2.png" alt="BACP Logo" class="bacp-logo">
+                </a>
+                <img src="dbs.png" alt="DBS" class="dbs">
+            </div>
+
+            <a href="https://www.counselling-directory.org.uk/counsellors/deborah-rea" target="_blank">
+                <img src="directory2.png" alt="Directory Logo" class="directory-logo">
             </a>
-            
-            
-            <img src="dbs.png" alt="DBS" class="dbs">
+            <p class="ico-text">ICO registered: ZB781976</p>
+
+            <div class="extra-logos">
+                <img src="lgbtq.jpg" alt="LGBTQ Inclusive">
+                <img src="neuro.png" alt="Neurodiversity Inclusive">
+            </div>
         </div>
-        <a href="https://www.counselling-directory.org.uk/counsellors/deborah-rea" target="_blank">
-            <img src="directory2.png" alt="Directory Logo" class="directory-logo">
-        </a>
-        <p class="ico-text">ICO registered: ZB781976</p>
-    </div>
-</footer>
+    </footer>
 </body>
 </html>
