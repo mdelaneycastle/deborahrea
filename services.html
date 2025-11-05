@@ -13,30 +13,34 @@
             box-sizing: border-box;
             color: #333;
         }
+
         header {
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 20px;
             background: linear-gradient(to right, #FFFACD, white, #FFFACD);
-            color: #333;
             text-align: center;
         }
+
         header img {
             height: 100px;
             margin-bottom: 10px;
         }
+
         header h1 {
             margin: 0;
             font-size: 28px;
             font-weight: bold;
         }
+
         header .subheader {
             margin: 0;
             font-size: 18px;
             margin-top: 10px;
             font-weight: normal;
         }
+
         header .quote {
             margin: 0;
             font-size: 18px;
@@ -44,27 +48,32 @@
             font-weight: 600;
             font-style: italic;
         }
+
         nav {
             text-align: center;
             padding: 15px 0;
             background-color: #f5f5f5;
             border-bottom: 1px solid #ccc;
         }
+
         nav a {
             margin: 0 15px;
             text-decoration: none;
             color: #333;
             font-size: 18px;
         }
+
         nav a:hover {
             text-decoration: underline;
         }
+
         .container {
             max-width: 900px;
             margin: 20px auto;
             padding: 0 20px;
             text-align: center;
         }
+
         table {
             width: 100%;
             max-width: 600px;
@@ -72,9 +81,11 @@
             border-collapse: collapse;
             text-align: center;
         }
+
         table, th, td {
             border: 1px solid #333;
         }
+
         td {
             padding: 10px;
         }
@@ -113,7 +124,7 @@
         .testimonial-name {
             margin-top: 15px;
             font-weight: bold;
-            color: black; /* keep names black */
+            color: black;
             font-style: normal;
         }
 
@@ -126,25 +137,43 @@
             padding: 20px 0;
             text-align: center;
         }
+
         footer p {
             margin: 5px 0;
         }
+
         .footer-logos {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
+
         .top-logos {
             display: flex;
-            flex-direction: row;
             gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
+
         .bacp-logo, .registration-icon, .dbs {
             height: 60px;
         }
+
         .directory-logo {
             height: 30px;
             margin-top: 10px;
+        }
+
+        .extra-logos {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .extra-logos img {
+            height: 40px;
         }
 
         @media (max-width: 768px) {
@@ -152,8 +181,13 @@
                 flex-direction: column;
                 align-items: center;
             }
+
             .testimonial {
                 max-width: 90%;
+            }
+
+            .extra-logos img {
+                height: 35px;
             }
         }
     </style>
@@ -179,7 +213,7 @@
 
         <p>Sessions last for 50 minutes and are either long-term or short-term. My fees are £50 after the consultation. I also offer concessionary rates: please enquire.</p>
 
-        <p> I am based in both Forest Row and Tunbridge Wells.</p>
+        <p>I am based in both Forest Row and Tunbridge Wells.</p>
 
         <p>I am a registered member of the British Association for Counselling and Psychotherapy (MBACP). I am fully insured, ICO registered, and DBS checked.</p>
 
@@ -189,10 +223,10 @@
             <tr><td>Abuse or neglect</td><td>Loneliness or lack of fulfilment</td></tr>
             <tr><td>Addictions and addictive behaviours</td><td>Life-changing events</td></tr>
             <tr><td>Anger management</td><td>Low mood</td></tr>
-            <tr><td>Anxiety and emotional regulation</td><td>Neurodigergence</td></tr>
+            <tr><td>Anxiety and emotional regulation</td><td>Neurodivergence</td></tr>
             <tr><td>Bereavement and loss</td><td>Personal development</td></tr>
             <tr><td>Chronic Fatigue Syndrome</td><td>Redundancy and work-related issues</td></tr>
-            <tr><td>Depression</td><td>Relationships problems</td></tr>
+            <tr><td>Depression</td><td>Relationship problems</td></tr>
             <tr><td>Grief</td><td>Self-esteem and confidence</td></tr>
             <tr><td>Health-related issues</td><td>Self-harm</td></tr>
             <tr><td>Social anxiety</td><td>Support around sexuality, identity, and relationships</td></tr>
@@ -200,31 +234,29 @@
         </table>
 
         <!-- Testimonials Section -->
-        <!-- Testimonials Section -->
-        <!-- Testimonials Section -->
         <h2 class="testimonials-heading">Testimonials</h2>
         <div class="testimonials-section">
             <div class="testimonial">
                 “I've been having sessions with Deborah since January, our sessions have been a safe place to talk about whatever I need to talk about, a space to cry, be angry and openly speak. Deborah has given me tools to use moving forward and really changed my outlook on the future. Thank you for everything.”
                 <div class="testimonial-name">Emma</div>
             </div>
-        
+
             <div class="testimonial">
                 “I started seeing Deborah with zero expectation and an open mind having never had any form of therapy before. I found the whole experience to be totally life changing. I've been able to be softer to myself with emotions that arise, giving myself time to sit with them. I've also managed to become more conscious and less compulsive with my reactions. Deborah is incredible at holding a safe space and guiding you through trauma to lift the heavy weight away. She made me feel so capable of getting through challenges and eliminating many limiting beliefs. I'm very grateful for Deborah's support and would recommend her to anybody who is struggling with holding onto traumatic experiences. Again, thank you so much for everything and I hope you’re well.”
                 <div class="testimonial-name">Alice</div>
             </div>
-        
+
             <div class="testimonial">
                 “I've been seeing Deborah weekly for ongoing counselling and have been welcomed with her genuine care and patience in a space that feels both safe and calm. Deborah has really helped me discover insightful ways to deal with my ongoing stresses and childhood trauma — often in a creative way. I am really grateful for how Deborah has helped me shift into a more conscious way of dealing with my life. Thank you!”
                 <div class="testimonial-name">Paula</div>
             </div>
-        
+
             <div class="testimonial">
                 “I have worked with Deborah Rea, as my Counsellor, for some time, following a catastrophic schism in my family.
                 I looked at other Counsellors, within easy travel and eventually found Deborah, who happily also works online. My first interview with her was very easy, given my circumstances and compared with others I had interviewed. She was professional, approachable, very easy to talk to and - having been a chief executive for some 20 years - I liked and trusted her; and I made an early decision to contract with her.
-        
+
                 I have never regretted this decision.
-        
+
                 Deborah has not given me an easy ride. Her questions are carefully thought through, and she can think on her feet. It has forced me to face some unpleasant truths about my past relationship with members of my family.
                 At the same time, Deborah has helped me to come to terms with events in my upbringing and past, enabling me to surface issues that I had not considered, and helping me to rebuild my life.
                 As I consider tackling some of the issues, both mine and others, I am now much better equipped mentally to do so.
@@ -232,7 +264,7 @@
                 <div class="testimonial-name">Terence</div>
             </div>
         </div>
-
+    </div>
 
     <footer>
         <p>&copy; 2024 Deborah Rea Counselling FDSC. All rights reserved.</p>
@@ -243,10 +275,16 @@
                 </a>
                 <img src="dbs.png" alt="DBS" class="dbs">
             </div>
+
             <a href="https://www.counselling-directory.org.uk/counsellors/deborah-rea" target="_blank">
                 <img src="directory2.png" alt="Directory Logo" class="directory-logo">
             </a>
             <p class="ico-text">ICO registered: ZB781976</p>
+
+            <div class="extra-logos">
+                <img src="lgbtq.jpg" alt="LGBTQ Inclusive">
+                <img src="neuro.png" alt="Neurodiversity Inclusive">
+            </div>
         </div>
     </footer>
 </body>
